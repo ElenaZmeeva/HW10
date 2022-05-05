@@ -2,13 +2,15 @@ package com.company;
 
 
 public class Employee {
-    static int idCount = 0;
+    private int id;
+    static int counter;
     private String employeeName;
-    int department;
-    int salary;
+   private int department;
+    private int salary;
+
 
     public Employee(String employeeName, int department, int salary) {
-        idCount++;
+        this.id=counter++;
         this.employeeName = employeeName;
         this.department = department;
         this.salary = salary;
@@ -31,8 +33,9 @@ public class Employee {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public int setSalary() {
         this.salary = salary;
+        return salary;
     }
 
 
